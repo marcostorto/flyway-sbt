@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.subtitle %} {{ page.subtitle }} -{% endif %}{% if page.title %} {{ page.title }} -{% endif %} Flyway by Boxfuse &bull; Database Migrations Made Easy.</title>
+    <link rel="alternate" type="application/atom+xml" title="Flyway" href="/blog/atom.xml" />
+    <link href="assets/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/prettify-20110601/prettify.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/flywaydb.css" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8"/>
+    <meta property="og:title" content="Flyway by Boxfuse &bull; Database Migrations Made Easy."/>
+    <meta property="og:type" content="product"/>
+    <meta property="og:url" content="https://flywaydb.org"/>
+    <meta property="og:site_name" content="Flyway by Boxfuse"/>
+    <meta property="og:image" content="https://flywaydb.org/assets/logo/flyway-logo-tm.png"/>
+    <meta property="fb:admins" content="762307805"/>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8034033-6']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        if (self !== top) {
+            top.location = self.location;
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="header" class="row">
+        <div class="col-md-3">
+            {% if page.tab != 'home' %}<a href="/"><img src="assets/logo/flyway-logo-tm-sm.png" alt="Flyway" usemap="#logosmmap"/>
+            <map name="logosmmap">
+                <area shape="rect" coords="45,90,120,106" href="https://boxfuse.com" alt="Boxfuse">
+            </map></a>{% endif %}
+        </div>
+        <div class="jumbotron vertical-center col-md-9">
+          <h1>Flyway SBT</h1>
+        </div>
+    </div>
+</div>
+{% if page.tab != 'home' %}
+<div class="container">
+{% endif %}
+
+{{ content }}
+
+{% if page.tab != 'home' %}
+</div>
+{% endif %}
+
+<div class="container">
+    <hr class="soften"/>
+    <div id="footer">
+
+        <!-- Place this tag where you want the button to render. -->
+        <p>
+            &copy; 2010-2017 <a href="https://boxfuse.com">Boxfuse GmbH</a>. Made with <i class="fa fa-heart"></i> in M&uuml;nchen.
+        </p>
+        <p>
+            Code licensed under <a href="https://raw.githubusercontent.com/flyway/flyway/master/LICENSE.txt">Apache License, Version 2</a><br/>
+            Website content licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY SA 4.0</a>
+        <br/>
+            Icons from <a href="http://fontawesome.io/">Font Awesome</a>,
+            licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>
+        </p>
+
+        <p>
+            Flyway is a registered trademark of <a href="http://boxfuse.com">Boxfuse GmbH</a><br/>
+            All other trademarks, trade names, logos or service marks mentioned on this site belong to their respective owners.</p>
+            <p>This site collects anonymous usage information through Google Analytics.</p>
+    </div>
+</div>
+<script src="assets/jquery-1.12.1/jquery-1.12.1.min.js" type="text/javascript"></script>
+<script src="assets/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/prettify-20110601/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        prettyPrint();
+
+        $("a[href^=http]").each(function () {
+            if (this.href.indexOf(location.hostname) == -1) {
+                $(this).attr({
+                    target: "_blank",
+                    title: "Opens in a new window"
+                });
+            }
+        });
+    });
+
+    if (navigator.platform.indexOf('Win') == -1) {
+        // Not windows
+        // Fix line continuation marks
+        $("pre.console").html(function () {
+            return $(this).html().replace(/\^\n/g, "\\\n");
+        });
+        // And prompt char
+        $("pre.console span").html(function () {
+            return $(this).html().replace("&gt;", "$");
+        });
+    }
+</script>
+<!-- Place this tag right after the last button or just before your close body tag. -->
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
