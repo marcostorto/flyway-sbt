@@ -7,7 +7,15 @@ sonatypeProjectHosting := Some(GitHubHosting(user="flyway", repository="flyway-s
 //  Developer(id="davidmweber", name="David Weber", email="dave@veryflatcat.com", url=url("https://davidmweber.github.io/flyway-sbt-docs/"))
 //)
 licenses := Seq("APL2" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
-publishTo := sonatypePublishTo.value
+//publishTo := sonatypePublishTo.value
 
 // sbt publishSigned
 // sbt sonatypeRelease
+
+publishTo := {
+  val nexus =
+    "http://repo02.tecniplastgroup.com:8081/"
+  Some(
+    "releases" at nexus + "repository/maven-releases/"
+  )
+}

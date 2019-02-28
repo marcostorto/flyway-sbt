@@ -36,7 +36,7 @@ object FlywayPlugin extends AutoPlugin {
     // common migration settings for all tasks
     //*********************
     val flywayDriver = settingKey[String]("The fully qualified classname of the jdbc driver to use to connect to the database. By default, the driver is autodetected based on the url.")
-    val flywayUrl = settingKey[String]("The jdbc url to use to connect to the database.")
+    val flywayUrl = taskKey[String]("The jdbc url to use to connect to the database.")
     val flywayUser = settingKey[String]("The user to use to connect to the database.")
     val flywayPassword = settingKey[String]("The password to use to connect to the database.")
 
